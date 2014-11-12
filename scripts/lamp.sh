@@ -2,14 +2,14 @@
 # These were only needed for building VMware/Virtualbox extensions:
 sleep 30
 sudo yum install -y httpd
-sudo systemctl start httpd.service
-sudo systemctl enable httpd.service
+sudo service httpd start
+sudo chkconfig httpd on
 
 sudo yum install -y php php-mysql
 sudo yum install -y php-mbstring php-mycrypt php-pdo php-bcmath php-cli php-common
 sudo yum install -y php-dba php php-gd php-imap php-pecl-apc php-pecl-memcache php-soap
 sudo yum install -y php-xml php-xmlrpc
-sudo systemctl restart httpd.service
+sudo service httpd restart
 
 sudo yum -y install mysql mysql-server
 sudo chkconfig --levels 235 mysqld on
@@ -52,9 +52,7 @@ expect eof
 
 echo "$SECURE_MYSQL"
 
-
-sudo systemctl enable mysqld.service
-sudo systemctl restart httpd.service
+sudo service httpd restart
 
 echo "<?php phpinfo(); ?>" > /var/www/info.php
 

@@ -41,7 +41,9 @@
         "scripts": [
             "scripts/vagrant.sh",
             "scripts/vboxguest.sh",
-            "scripts/lamp.sh",
+            "scripts/lamp_install.sh",
+            "scripts/lamp_ssl_keys.sh",
+            "scripts/lamp_config.sh",
             "scripts/compact.sh"
         ]
     }]

@@ -37,3 +37,7 @@ packer centos-6.5-x86_64-lamp.json
 The process should take about 20 to 30 minutes to complete under a standard office internet
 connection and under a windows computer.
 
+### Updates
+
+Added ```scripts/lamp_config.sh``` to pre-build ```apache``` configurations and ```scripts/lamp_ssl_keys.sh``` to create the self-signed certificate.
+

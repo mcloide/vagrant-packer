@@ -6,7 +6,7 @@ a CentOS 6.5 box with:
 
 ```
     httpd service (Apache 2.2)
-    mariadb service (MySQL open source version)
+    mysqld service (MySQL 5)
     php (latest available for CentOS 6.5 - should be 5.34)
 ```
 
